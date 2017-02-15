@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TripTrackerGroup</title>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+ 
+  <body>
+   
+    <%= render 'layouts/navbar' %>
+     <% flash.each do |type, message| %>
+     <div class = "flash <%= type %>">
+     <%= message %>
+     </div>
+     <% end %>
+    <%= yield %>
+  </body>
+</html>

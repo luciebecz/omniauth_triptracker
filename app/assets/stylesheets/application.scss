@@ -1,0 +1,51 @@
+@import 'materialize';
+@import 'font-awesome';
+
+/*=======================================
+NAVBAR
+=======================================*/
+
+.dropdown-button {
+  float: right;
+  padding-right: 9px;
+}
+
+div {
+  border-radius: 7px
+}
+body.form {
+  background-image: url(http://slhando.com/i/2017/01/dark-nature-wallpaper-background.jpg);
+  color: white;
+}
+body {
+  background-image: url(https://4.bp.blogspot.com/-Z2Sn_u9GwXA/VoIrLpbVbgI/AAAAAAAB7hI/CNfG152gyHo/s0/Road_through_Iceland_nature_wallpaper.jpg);
+  background-size: cover;
+}
+
+
+
+
+/*=======================================
+FLASH
+=======================================*/
+.flash {
+  text-align: center;
+  font-size: 17px;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  background-color: grey;
+}
+
+.flash.info {
+  background-color: lightblue;
+}
+
+.flash.error {
+  background-color: red;
+}
+
+.flash.success { 
+  background-color: lightcyan;
+  color: black;
+}
