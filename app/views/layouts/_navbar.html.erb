@@ -1,14 +1,21 @@
-
-<nav class ="grey lighten-3">
+<nav class="grey darken-2">
 
   <div class = "nav-wrapper"> 
-    <a href "#!" class= "brand-logo black-text">Trip Tracker</a>
-    <a href "#" data-activates="mobile" class="dropdown-button black-text">
+    <a href "#!" class= "brand-logo">Trip Tracker</a>
+    <a href "#" data-activates="mobile" class="dropdown-button">
     <i class="fa fa-bars"></i></a>
     <ul class="right hide-on-med-and-down">
-      <li><%= link_to 'Home', trips_path%></li>
+      <% if user_signed_in? %>
+        <li><%= link_to 'Home', trips_path%></li>
+        <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li class="active">
+        <%= link_to 'Sign Up for Deals', signups_path%>
+        <%= link_to 'Login', new_user_session_path %>
+      <% end %>    
     </ul>
-    <ul class="dropdown-content" id="mobile">
+    
+    <ul class="side-nav" id="mobile">
       <li><%= link_to 'Home', trips_path%></li>
       <% if user_signed_in? %>
       <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
@@ -21,3 +28,29 @@
   </div>
   
 </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

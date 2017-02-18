@@ -7,22 +7,29 @@ NAVBAR
 
 .dropdown-button {
   float: right;
-  padding-right: 9px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 div {
   border-radius: 7px
 }
+
 body.form {
   background-image: url(http://slhando.com/i/2017/01/dark-nature-wallpaper-background.jpg);
-  color: white;
+  color: black;
 }
+
+body.signupdeal {
+  background-image: url(https://static1.squarespace.com/static/553fae93e4b01d70400fa3b1/t/553fec87e4b0261fab3c5d7f/1430252680823/plain-calm-water_835.jpg?format=1500w);
+  background-size: cover;
+
+}
+
 body {
   background-image: url(https://4.bp.blogspot.com/-Z2Sn_u9GwXA/VoIrLpbVbgI/AAAAAAAB7hI/CNfG152gyHo/s0/Road_through_Iceland_nature_wallpaper.jpg);
   background-size: cover;
 }
-
-
 
 
 /*=======================================
@@ -48,4 +55,7 @@ FLASH
 .flash.success { 
   background-color: lightcyan;
   color: black;
+}
+
+.next_page {
 }

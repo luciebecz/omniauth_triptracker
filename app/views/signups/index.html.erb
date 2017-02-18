@@ -1,0 +1,13 @@
+<body class="signupdeal">
+  <div class="container">
+    <h1>Sign up for Trip Tracker Deals!</h1>
+    <div class='black-text'>
+      <%= form_for :user, url: url_for(controller: 'signups', action: 'create') do |f| %>
+        <%= f.label :email %>
+        <%= f.email_field :email %>
+    </div>
+        <%= f.submit %>
+      <% end %>
+      <%= link_to 'Deals Mailer', new_newsletter_path %>
+  </div>
+</body>

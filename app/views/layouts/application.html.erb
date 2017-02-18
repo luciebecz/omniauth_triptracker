@@ -4,18 +4,27 @@
     <title>TripTrackerGroup</title>
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
  
   <body>
    
     <%= render 'layouts/navbar' %>
-     <% flash.each do |type, message| %>
-     <div class = "flash <%= type %>">
-     <%= message %>
-     </div>
-     <% end %>
+      <% flash.each do |type, message| %>
+      <div class = "flash <%= type %>">
+      <%= message %>
+      </div>
+      <% end %>
     <%= yield %>
+      <br />
+      <% if user_signed_in? %>
+        <div class="center">
+        <strong class="black-text">Signup for Weekly Deal Alerts <%= link_to "Here!", signups_path %>
+      <% else %>
+      
+        <p class="center white-text">Create An Account and Sign Up for Our Weekly Mailing List!</p>
+      <% end %>   
   </body>
 </html>
+

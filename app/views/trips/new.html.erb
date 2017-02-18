@@ -1,8 +1,10 @@
 <body class="form">
-<h1>Create A Trip</h1>
+  <h1 class="center white-text">Create A Trip</h1>
 
-<%= render(partial: 'form') %>
+  <%= render(partial: 'form') %>
 
-<br />
-<%= link_to 'All Trips', trips_path, class:'btn cyan white-text' %>
+  <br />
+  <div class='center'>
+  <%= link_to 'All Trips', trips_path, class:'btn cyan white-text' %>
+  </div>
 </body>

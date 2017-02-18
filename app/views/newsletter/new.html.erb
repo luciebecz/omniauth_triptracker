@@ -1,0 +1,26 @@
+<body class="signupdeal">
+<h1 class="white-text">Send a Deal Mailer</h1>
+<hr />
+
+<%= form_tag newsletter_index_path do %>
+  <div>
+    <%= label_tag "Subject" %>
+    <br />
+    <%= text_area_tag "subject", nil, placeholder: 'Subject', required: true %>
+  </div>
+
+  <div class="white-text">
+    <%= label_tag "emails (*comma separated)"%>
+    <br />
+    <%= text_area_tag "emails", nil, placeholder: 'test@test.com, contact@dpl.com', required: true %>
+  </div>
+  
+  <div class="white-text">
+    <%= label_tag "Deal Mailer Type" %>
+    <br />
+      <%= select_tag "newsletter", options_for_select(['weekly', 'monthly', 'yearly']) %>
+  </div>
+
+  <%= submit_tag "Send" %>
+<% end %>
+</body>
